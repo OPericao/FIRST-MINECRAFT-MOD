@@ -15,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+// CHECK DE QUE FUNCIONAN OS COMMITS
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(net.pericles.firstmod.FirstMod.MODID)
 public class FirstMod
