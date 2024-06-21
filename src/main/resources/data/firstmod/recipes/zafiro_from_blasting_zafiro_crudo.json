@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "zafiro",
+  "ingredient": {
+    "item": "firstmod:zafiro_crudo"
+  },
+  "result": "firstmod:zafiro"
+}

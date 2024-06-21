@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.pericles.firstmod.FirstMod;
+import net.pericles.firstmod.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FirstMod.MODID);
@@ -19,6 +20,7 @@ public class ModCreativeModTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                          output.accept(ModItems.ZAFIRO.get());
                          output.accept(ModItems.ZAFIRO_CRUDO.get());
+                         output.accept(ModBlocks.BLOQUE_ZAFIRO.get());
 
                          output.accept(Items.EGG);
                     })
