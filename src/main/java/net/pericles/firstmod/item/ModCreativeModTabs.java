@@ -22,6 +22,8 @@ public class ModCreativeModTabs {
                          output.accept(ModItems.ZAFIRO_CRUDO.get());
                          output.accept(ModBlocks.BLOQUE_ZAFIRO.get());
 
+                         output.accept(ModItems.COMBINADO4.get());
+
                          output.accept(Items.EGG);
                     })
                     .build());

@@ -16,6 +16,9 @@ public class ModItems {
     public static final RegistryObject<Item> ZAFIRO_CRUDO = ITEMS.register("zafiro_crudo",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> COMBINADO4 = ITEMS.register("combinado4",
+            () -> new Item(new Item.Properties().food(ModFoods.COMBINADO4)));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
