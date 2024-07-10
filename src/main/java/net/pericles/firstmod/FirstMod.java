@@ -1,6 +1,7 @@
 package net.pericles.firstmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,6 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pericles.firstmod.block.ModBlocks;
+import net.pericles.firstmod.entity.ModEntities;
+import net.pericles.firstmod.entity.client.DittoRenderer;
 import net.pericles.firstmod.item.ModCreativeModTabs;
 import net.pericles.firstmod.item.ModItems;
 import org.slf4j.Logger;
@@ -39,6 +42,8 @@ public class FirstMod
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -78,7 +83,7 @@ public class FirstMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.DITTO.get(), DittoRenderer::new);
         }
     }
 }
