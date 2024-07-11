@@ -18,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pericles.firstmod.block.ModBlocks;
 import net.pericles.firstmod.entity.ModEntities;
 import net.pericles.firstmod.entity.client.DittoRenderer;
+import net.pericles.firstmod.entity.client.ZackRenderer;
 import net.pericles.firstmod.item.ModCreativeModTabs;
 import net.pericles.firstmod.item.ModItems;
 import org.slf4j.Logger;
@@ -84,6 +85,7 @@ public class FirstMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.DITTO.get(), DittoRenderer::new);
+            EntityRenderers.register(ModEntities.ZACK.get(), ZackRenderer::new);
         }
     }
 }

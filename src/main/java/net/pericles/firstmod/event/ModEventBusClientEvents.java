@@ -7,11 +7,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.pericles.firstmod.FirstMod;
 import net.pericles.firstmod.entity.client.ModModelLayers;
 import net.pericles.firstmod.entity.client.dittoModel;
+import net.pericles.firstmod.entity.client.zackFair;
 
 @Mod.EventBusSubscriber(modid = FirstMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(ModModelLayers.DITTO_LAYER, dittoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.ZACK_LAYER, zackFair::createBodyLayer);
     }
+
 }
